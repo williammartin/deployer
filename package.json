@@ -1,0 +1,32 @@
+{
+  "name": "deployer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/index.js",
+  "typings": "dist/src/index.d.ts",
+  "files": [
+    "src",
+    "dist/src"
+  ],
+  "dependencies": {
+    "@types/shelljs": "^0.8.8",
+    "jest-silent-reporter": "^0.2.1",
+    "node-docker-api": "^1.1.22",
+    "shelljs": "^0.8.4",
+    "yaml": "^1.10.0"
+  },
+  "devDependencies": {
+    "gaze-run-interrupt": "^1.0.1",
+    "jest": "^26.4.2",
+    "jsonlint": "^1.6.2",
+    "ts-jest": "^26.3.0",
+    "ts-node": "^9.0.0",
+    "tslint": "next",
+    "typescript": "^4.0.0-dev.20200531"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "jsonlint -i package.json && tsc",
+    "test": "npm run build && tslint --project tsconfig.json && jest 'dist/src/**/*Spec.js'"
+  }
+}

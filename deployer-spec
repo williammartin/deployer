@@ -1,0 +1,6 @@
+We're going to build an application that reads a set of contain configurations from a YAML file, checks the configuration against some security policy, produces warnings if there are any policy violations, otherwise deploys the containers to Docker.
+
+Other possible things depending on time:
+ - Polling for health
+ - Deploying to other container runtimes
+ - Configuration from another source

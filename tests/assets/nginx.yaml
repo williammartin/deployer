@@ -1,0 +1,5 @@
+containers:
+ - name: "test-nginx"
+   image:
+     repository: nginx
+     tag: "1.19"
